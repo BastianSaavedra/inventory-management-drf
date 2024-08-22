@@ -33,8 +33,8 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APPS = []
-THIRD_PARTY_APPS = []
+PROJECT_APPS = ["apps.inventory"]
+THIRD_PARTY_APPS = ["corsheaders", "rest_framework", "coreapi"]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
@@ -126,11 +126,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
-    "DEFAULT_PERMISSION_CLASSES": [
-        # Esto especifica que cualquier persona de nuestro dominio puede ingresar
-        # a la API
-        "rest_framework.permission.AllowAny",
-    ],
+    # "DEFAULT_PERMISSION_CLASSES": [
+    #     # Esto especifica que cualquier persona de nuestro dominio puede ingresar
+    #     # a la API
+    #     "rest_framework.permission.AllowAny",
+    # ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 16,
 }

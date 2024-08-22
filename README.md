@@ -1,6 +1,6 @@
-# Inventory Managment
+# Inventory Management
 
-Aplicacion web que ayudara a pequenos clientes a poder gestionar su negocio.
+Web application that will help small customers to manage their business.
 
 ## Tech Stack
 
